@@ -32,7 +32,7 @@ export function launch (target: string, fallback: string): void {
 export function dispatch (ua: string, context: Context): void {
   const os = detectOS(ua)
   if (!context.hasOwnProperty(os)) {
-    throw Error(`${os} context is not defined`)
+    throw new Error(`${os} context is not defined`)
   }
   launch(context[os].target, context[os].fallback)
 }
