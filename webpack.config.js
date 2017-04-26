@@ -8,7 +8,8 @@ const config = {
 
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].min.js'
+    filename: '[name].min.js',
+    library: 'SimpleCustomURLSchemeLauncher'
   },
 
   module: {

@@ -36,8 +36,7 @@
       "test/**/*.spec.js"
     ],
     "require": [
-      "babel-register",
-      "./test/helpers/setup-browser-env.js"
+      "babel-register"
     ]
   }
 }
