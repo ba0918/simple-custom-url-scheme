@@ -1,0 +1,43 @@
+{
+  "name": "simple-custom-url-scheme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava",
+    "build:dev": "webpack",
+    "build:prod": "cross-env NODE_ENV=production webpack",
+    "clear": "rimraf dist"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.24.1",
+    "cross-env": "^4.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-flowtype": "^2.32.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "flow-bin": "^0.44.2",
+    "rimraf": "^2.6.1",
+    "webpack": "^2.4.1"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.spec.js"
+    ],
+    "require": [
+      "babel-register",
+      "./test/helpers/setup-browser-env.js"
+    ]
+  }
+}
