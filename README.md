@@ -1,4 +1,5 @@
 # simple-custom-url-scheme
+[![Build Status](https://travis-ci.org/ba0918/simple-custom-url-scheme.svg?branch=master)](https://travis-ci.org/ba0918/simple-custom-url-scheme)
 
 Simple custom URL scheme launcher.
 
