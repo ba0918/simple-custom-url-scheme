@@ -3,13 +3,13 @@ const webpack = require('webpack')
 
 const config = {
   entry: {
-    'simple-custom-url-scheme': './src/simple-custom-url-scheme.js'
+    'simple-custom-url-scheme': './src/index.js'
   },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].min.js',
-    library: 'SimpleCustomURLSchemeLauncher'
+    library: 'SimpleCustomURLScheme'
   },
 
   module: {
@@ -25,13 +25,10 @@ const config = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    })
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin()
   ]
-}
-
-if (process.env.NODE_ENV === 'production') {
-  config.plugins.push(new webpack.optimize.OccurrenceOrderPlugin())
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin())
 }
 
 module.exports = config
