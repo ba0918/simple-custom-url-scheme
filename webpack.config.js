@@ -7,7 +7,7 @@ const config = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'bundle'),
     filename: '[name].min.js',
     library: 'SimpleCustomURLScheme'
   },
