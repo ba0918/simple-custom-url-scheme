@@ -1,7 +1,7 @@
 {
-  "name": "simple-custom-url-scheme",
+  "name": "@ba0918/simple-custom-url-scheme",
   "description": "Simple custom URL scheme launcher.",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
