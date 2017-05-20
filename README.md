@@ -6,7 +6,7 @@ Simple custom URL scheme launcher.
 ## Install
 
 ```
-yarn install @ba0918/simple-custom-url-scheme
+yarn add @ba0918/simple-custom-url-scheme
 ```
 
 ## Usage
@@ -53,5 +53,5 @@ yarn run test
 ```sh
 yarn run build
 cd dist
-npm publish
+npm publish --access=public
 ```
