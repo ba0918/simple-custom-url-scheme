@@ -3,20 +3,55 @@
 
 Simple custom URL scheme launcher.
 
+## Install
+
+```
+yarn install @ba0918/simple-custom-url-scheme
+```
+
 ## Usage
-
+for Node.js
 ```js
-import {dispatch} from 'simple-custom-url-scheme'
+import { dispatchFromUserAgent } from '@ba0918/simple-custom-url-scheme'
 
-dispatch(window.navigator.userAgent, {
-  'Android': { target: 'https://www.google.co.jp/', fallback: 'https://www.google.co.jp/' },
-  'iOS': { target: 'https://www.google.co.jp/', fallback: 'https://www.google.co.jp/' },
-  'PC': { target: 'https://www.google.co.jp/', fallback: 'https://www.google.co.jp/' },
+dispatchFromUserAgent(window.navigator.userAgent, {
+  'Android': { url: 'https://www.google.co.jp/', fallback: 'https://www.google.co.jp/' },
+  'iOS': { url: 'https://www.google.co.jp/', fallback: 'https://www.google.co.jp/' },
+  'PC': { url: 'https://www.google.co.jp/', fallback: 'https://www.google.co.jp/' },
 })
 ```
 
-## Tests
-
+for Browser
+```html
+<script src="./simple-custom-url-scheme.js"></script>
+<script>
+  window.SimpleCustomURLScheme.dispatchFromUserAgent(window.navigator.userAgent, {
+    'Android': { url: 'https://www.google.co.jp/', fallback:   'https://www.google.co.jp/' },
+    'iOS': { url: 'https://www.google.co.jp/', fallback: 'https://www.google.co.jp/' },
+    'PC': { url: 'https://www.google.co.jp/', fallback: 'https://www.google.co.jp/' },
+  });
+</script>
 ```
-yarn test
+
+## Development
+### Setup
+```sh
+yarn install
+```
+
+### Build
+```sh
+yarn run build
+```
+
+### Test
+```sh
+yarn run test
+```
+
+### Publish
+```sh
+yarn run build
+cd dist
+npm publish
 ```
